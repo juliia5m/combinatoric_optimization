@@ -39,7 +39,7 @@ public class Replace {
         ArrayList<Integer> get_sub = new ArrayList<>();
         int len = ch.length;
         char c = ch[position];
-        while (position < len && c == '{') {     //for parsing of a string of {}
+        while (position < ch.length && ch[position] == '{') {     //for parsing of a string of {}
             ++position;
             get_sub.add(depth_first_search(index++));
             assert ch[position] == '}';
